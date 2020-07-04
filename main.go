@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/Tak1za/ivar/config"
-	"github.com/Tak1za/ivar/handlers"
-	"github.com/Tak1za/ivar/middlewares"
+	"github.com/Tak1za/backer/config"
+	"github.com/Tak1za/backer/handlers"
+	"github.com/Tak1za/backer/middlewares"
 	"github.com/gin-gonic/gin"
 )
 

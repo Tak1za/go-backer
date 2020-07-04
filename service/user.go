@@ -3,7 +3,7 @@ package service
 import (
 	"log"
 
-	"github.com/Tak1za/ivar/models"
+	"github.com/Tak1za/backer/models"
 	"github.com/neo4j/neo4j-go-driver/neo4j"
 )
 
@@ -17,12 +17,13 @@ func CreateUser(session neo4j.Session, newUserRequest models.CreateUserRequest, 
 	})
 
 	if err != nil {
-		log.Println("Error creating user", err)
+		log.Println("Error running create user query", err.Error())
 		ce <- err
 		return
 	}
 
 	if err = result.Err(); err != nil {
+		log.Println("Error creating user", err.Error())
 		ce <- err
 		return
 	}

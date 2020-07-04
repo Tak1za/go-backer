@@ -1,0 +1,43 @@
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "name": "Varun Gupta",
+    "email": "varungupta2015135@gmail.com",
+    "gender": "male",
+    "image": "http://randomavatar.me/2353"
+}
+
+###
+
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "name": "Palak Mittal",
+    "email": "mit.palak99@gmail.com",
+    "gender": "female",
+    "image": "http://randomavatar.me/2453"
+}
+
+###
+
+POST http://localhost:8080/api/follow
+Content-Type: application/json
+
+{
+  "follower": "varungupta2015135@gmail.com",
+  "following": "mit.palak99@gmail.com"
+}
+
+###
+
+POST http://localhost:8080/api/follow
+Content-Type: application/json
+
+{
+  "follower": "mit.palak99@gmail.com",
+  "following": "varungupta2015135@gmail.com"
+}
+
+###

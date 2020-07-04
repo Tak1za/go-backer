@@ -9,15 +9,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func CreateUser(c *gin.Context) {
+func FollowUser(c *gin.Context) {
 	driver, err := getDriver(c)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
-	var createUserRequest models.CreateUserRequest
-	if err := c.ShouldBindJSON(&createUserRequest); err != nil {
+	var followRequest models.FollowRequest
+	if err := c.ShouldBindJSON(&followRequest); err != nil {
 		log.Println("Not a valid request: ", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Not a valid request"})
 		return
@@ -33,10 +33,10 @@ func CreateUser(c *gin.Context) {
 
 	ce := make(chan error)
 
-	go service.CreateUser(session, createUserRequest, ce)
+	go service.FollowUser(session, followRequest, ce)
 
 	if err = <-ce; err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create User"})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to follow user"})
 		return
 	}
 

@@ -25,6 +25,7 @@ func main() {
 	)
 
 	router.POST("/api/users", handlers.CreateUser)
+	router.POST("/api/follow", handlers.FollowUser)
 
 	router.Run()
 }

@@ -3,7 +3,7 @@ package service
 import (
 	"log"
 
-	"github.com/Tak1za/backer/models"
+	"github.com/Tak1za/go-backer/models"
 	"github.com/neo4j/neo4j-go-driver/neo4j"
 )
 

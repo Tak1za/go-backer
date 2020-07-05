@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"github.com/Tak1za/backer/config"
+	"github.com/Tak1za/go-backer/config"
 	"github.com/gin-gonic/gin"
 )
 

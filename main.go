@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/Tak1za/backer/config"
-	"github.com/Tak1za/backer/handlers"
-	"github.com/Tak1za/backer/middlewares"
+	"github.com/Tak1za/go-backer/config"
+	"github.com/Tak1za/go-backer/handlers"
+	"github.com/Tak1za/go-backer/middlewares"
 	"github.com/gin-gonic/gin"
 )
 
@@ -26,6 +26,7 @@ func main() {
 
 	router.POST("/api/users", handlers.CreateUser)
 	router.POST("/api/follow", handlers.FollowUser)
+	router.POST("/api/posts", handlers.CreatePost)
 
 	router.Run()
 }

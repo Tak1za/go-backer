@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/Tak1za/backer/models"
-	"github.com/Tak1za/backer/service"
+	"github.com/Tak1za/go-backer/models"
+	"github.com/Tak1za/go-backer/service"
 	"github.com/gin-gonic/gin"
 )
 
